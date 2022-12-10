@@ -24,8 +24,6 @@ typedef char* (*align_strategy_funcion)(const sMessageItem *item
 		, unsigned arg_idx,
 		print_function print_func);
 
-extern UART_HandleTypeDef LOG_UART_HANDLE;
-
 static const char *level_strings[] = {
   "TRACE", "DEBUG", "INFO ", "WARN ", "ERROR", "FATAL"
 };
@@ -77,6 +75,8 @@ static inline char* align_buffer_end()
 static void log_Task(void *argument);
 
 #ifdef USE_LOG_UART
+extern UART_HandleTypeDef LOG_UART_HANDLE;
+
 	#ifdef LOG_UART_DMA
 
 	static void log_UART_DMA_write(int len) {

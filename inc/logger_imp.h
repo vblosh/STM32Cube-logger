@@ -17,7 +17,7 @@
 #define MAX_PCHAR_LENGTH 32
 
 // use ITM to logging
-//#define USE_LOG_ITM 1
+#define USE_LOG_ITM 1
 // use UART for logging
 //#define USE_LOG_UART 1
 
